@@ -12,13 +12,11 @@ PATH_WRITE_FOLDER = r"\WIDERFACE\Processed_WIDERFACEValidation"
 
 
 with open(current_folder_path + PATH_READ_FILE, "r") as read_f:
-      # for i in 
       while True:            
             temp_file_name = read_f.readline()
             if not temp_file_name:
                   break
             temp_file_name = temp_file_name.strip(".jpg\n").split("/")[1]
-            # print(temp_file_name + r".txt")
             num_faces = int(read_f.readline().strip())
             with open(current_folder_path + PATH_WRITE_FOLDER + "\\" + temp_file_name + r".txt", "w") as write_f:
             # print(current_folder_path + PATH_WRITE_FOLDER + "\\" + temp_file_name + r".txt")
